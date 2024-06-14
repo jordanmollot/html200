@@ -1,6 +1,5 @@
-
-let choice
-let amt
+let choice;
+let amt = 0;
 let balance = 100;
 
 do {
@@ -8,14 +7,16 @@ do {
     switch(choice) {
         case 'W': {
             amtWithdraw = prompt('How much do you want to withdraw?');
+            withdrawFunction(balance);
             break;
         }
         case 'D': {
             amtDeposit = prompt('How much do you want to deposit?');
+            depositFunction(balance);
             break;
         }
         case 'B': {
-            alert(('Your balance: $') + balance);
+            balanceFunction(balance);
             break;
         }
         case 'Q': {
@@ -26,3 +27,15 @@ do {
 }
 while (choice != 'Q')
 
+function withdrawFunction() {
+    amt = balance - Number(amtWithdraw);
+}
+
+function depositFunction() {
+    amt = balance + Number(amtDeposit);
+}
+
+function balanceFunction() {
+    totalBalance = balance + amt;
+    alert(('Your balance: $') + totalBalance);
+}
