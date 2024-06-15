@@ -27,11 +27,19 @@ do {
 while (choice != 'Q')
 
 function withdrawFunction(firstNumber, secondNumber) {
+    if (Number(secondNumber) > balance) {
+        alert('Insufficient funds.');
+    } else {
     balance = firstNumber - Number(secondNumber);
+    }
 }
 
 function depositFunction(firstNumber, secondNumber) {
+    if (Number(secondNumber) >= 50000) {
+        alert('This application has a deposit limit of $50,000. If you wish to deposit $50,000 or more, please visit your local bank branch. Thank you!');
+    } else {
     balance = firstNumber + Number(secondNumber);
+    }
 }
 
 function balanceFunction(firstNumber) {
