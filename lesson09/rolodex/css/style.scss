@@ -1,0 +1,48 @@
+@import "./variables";
+
+body {
+    background-color: $bgColor;
+    font-family: sans-serif;
+    margin: 2rem;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    align-items: center;
+    .headshot-box {
+        width:fit-content;
+        padding-right: 2rem;
+        text-align: center;
+        color: $textColor;
+        h2 {
+            font-style: italic;
+            font-weight: 100;
+            line-height: .5rem;
+        }
+    }
+    .info-box {
+        background-color: $bgColor;
+        padding: 1rem 2rem 2rem 2rem;
+        width: 75%;
+        line-height: 1.5rem;
+        color: $textColor;
+        a {
+            text-decoration: none;
+            color: $textColor;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        p {
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@import "./breakpoints";
