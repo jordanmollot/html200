@@ -1,0 +1,33 @@
+//Breakpoints
+
+// Tablets and devices 768px and lower
+@media screen and (max-width: 768px){
+    body {
+        margin: 0rem;
+    }
+    
+    .container {
+        width: auto;
+        margin: 2rem;
+    }
+}
+
+// Phones and devices 480px and lower
+@media screen and (max-width: 480px){
+    body {
+        margin: 1rem;
+    }
+    
+    .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+        .headshot-box {
+            padding: 1rem;
+        }
+        .info-box {
+            padding: 1rem 2rem 2rem;
+        }
+    }
+}
